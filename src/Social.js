@@ -2,13 +2,14 @@ import React from "react";
 import social_data from "./social_data";
 
 function Social() {
-  const allSocial = social_data.map((data) => {
+  const allSocial = social_data.map((data, index) => {
     const { link, name } = data; // data.link, data.name
+
     return (
-      <li>
-        <a href={link} target="_blank" className="george__link">
+      <li key={index}>
+        <a href={link} target="_blank" className="george__link" rel="noopener noreferrer">
           {name}
-        </a>
+        </a>{" "}
       </li>
     );
   });

@@ -1,6 +1,5 @@
 import React from "react";
-import george_iphone from "./assets/George-iPhone-X.png";
-import Social from "./Social";
+import george_iphone from "./assets/GeorgeiPhone-500.png";
 import dev from "./dev";
 import Info from "./Info";
 import "./App.scss";
@@ -15,7 +14,8 @@ function App() {
       </div>
 
       <div className="col-50">
-        <img src={george_iphone} className="App-logo" alt="logo" />
+        {/* <img src={george_iphone} className="george__iphoneImage" alt="A picture of me in a mockup" /> */}
+        <img src={george_iphone} className="george__iphoneImage" alt="Selfie in a mockup" />
       </div>
     </div>
   );

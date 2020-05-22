@@ -7,7 +7,7 @@ function Info({ name, job, description }) {
       <h1 className="george__name">{name}</h1>
       <h2 className="george__job">{job}</h2>
       <Desc />
-      <a href="#" role="button" className="george__contact">
+      <a href="mailto:garcia.george.b@gmail.com" role="button" className="george__contact">
         Contact
       </a>
       <div>
@@ -19,8 +19,13 @@ function Info({ name, job, description }) {
 
 function Desc() {
   return (
-    <p class="george__copy">
-      Currently at <a href="#">Copia</a> trying to end world hunger <br />
+    <p className="george__copy">
+      Currently at{" "}
+      <a href="https://www.gocopia.com/" rel="noopener noreferrer" target="_blank">
+        Copia
+      </a>{" "}
+      trying to end world hunger
+      <br />
       one line of code at a time
     </p>
   );

@@ -13,6 +13,10 @@ $spacing-normal: 30px;
   line-height: 1.5;
   padding-top: 60px;
 
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+  }
+
   &__info {
     text-align: center;
     padding: 75px 0;
@@ -87,6 +91,10 @@ $spacing-normal: 30px;
       text-decoration: underline;
     }
   }
+
+  &__iphoneImage {
+    width: 100%;
+  }
 }
 
 ul {
@@ -97,6 +105,9 @@ ul {
 
 .col-50 {
   width: 50%;
+  @media screen and (max-width: 500px) {
+    width: 100%;
+  }
 }
 
 a {
