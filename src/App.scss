@@ -1,20 +1,38 @@
 $font-xl: 48px;
 $font-l: 28px;
-$font-m: 17px;
+$font-m: 19px;
 $font-s: 14px;
-$blue: #0071e3;
-$dark-gray: #1e1e1e;
 $spacing-normal: 30px;
 
 .george {
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  color: white;
+  color: var(--color-surface);
   line-height: 1.5;
   padding-top: 60px;
+  position: relative;
 
   @media screen and (max-width: 500px) {
     flex-direction: column;
+  }
+
+  &__theme {
+    position: absolute;
+    font-size: $font-m;
+    color: var(--color-primary);
+    font-weight: bold;
+    cursor: pointer;
+    right: 50px;
+
+    @media screen and (max-width: 500px) {
+      right: 15px;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__info {
@@ -57,7 +75,7 @@ $spacing-normal: 30px;
     padding-top: 7px;
     padding-bottom: 8px;
     border-radius: 18px;
-    background: #0071e3;
+    background: var(--color-primary);
     color: #fff;
     text-decoration: none;
 
@@ -73,7 +91,7 @@ $spacing-normal: 30px;
 
     li {
       display: flex;
-      color: $blue;
+      color: var(--color-primary);
       margin: 0 10px;
 
       &::after {
@@ -86,7 +104,8 @@ $spacing-normal: 30px;
   &__link {
     display: flex;
     text-decoration: none;
-
+    position: relative;
+    padding-right: 4px;
     &:hover {
       text-decoration: underline;
     }
@@ -94,6 +113,10 @@ $spacing-normal: 30px;
 
   &__iphoneImage {
     width: 100%;
+  }
+
+  &__jobLink {
+    color: var(--color-surface);
   }
 }
 
@@ -111,7 +134,7 @@ ul {
 }
 
 a {
-  color: $blue;
+  color: var(--color-primary);
 }
 
 h1,
@@ -122,6 +145,18 @@ p {
 
 p {
   line-height: 1.5;
+}
+
+.right-arrow {
+  position: relative;
+  width: 11.5px;
+  svg {
+    position: absolute;
+    right: 0;
+    bottom: 4.5px;
+    height: 11px;
+    width: 11px;
+  }
 }
 
 // .App {

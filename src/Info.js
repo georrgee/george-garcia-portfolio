@@ -21,7 +21,7 @@ function Desc() {
   return (
     <p className="george__copy">
       Currently at{" "}
-      <a href="https://www.gocopia.com/" rel="noopener noreferrer" target="_blank">
+      <a className="george__jobLink" href="https://www.gocopia.com/" rel="noopener noreferrer" target="_blank">
         Copia
       </a>{" "}
       trying to end world hunger
