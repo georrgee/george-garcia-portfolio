@@ -2,7 +2,33 @@ $font-xl: 48px;
 $font-l: 28px;
 $font-m: 19px;
 $font-s: 14px;
-$spacing-normal: 30px;
+$spacing-l: 30px;
+$spacing-m: 16px;
+$spacing-s: 8px;
+
+%button {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  min-width: 28px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 7px;
+  padding-bottom: 8px;
+  border-radius: 18px;
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 .george {
   width: 100%;
@@ -43,7 +69,7 @@ $spacing-normal: 30px;
   &__name,
   &__job,
   &__copy {
-    padding-bottom: $spacing-normal;
+    padding-bottom: $spacing-l;
   }
 
   &__name {
@@ -61,31 +87,11 @@ $spacing-normal: 30px;
   }
 
   &__contact {
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    white-space: nowrap;
-    font-size: 17px;
-    line-height: 1;
-    font-weight: 400;
-    letter-spacing: -0.022em;
-    min-width: 28px;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 7px;
-    padding-bottom: 8px;
-    border-radius: 18px;
-    background: var(--color-primary);
-    color: #fff;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
+    @extend %button;
   }
 
   &__links {
-    padding-top: $spacing-normal;
+    padding-top: $spacing-l;
     display: flex;
     justify-content: center;
 
@@ -120,6 +126,48 @@ $spacing-normal: 30px;
   }
 }
 
+.project {
+  background-color: var(--color-secondary);
+  padding: $spacing-l;
+  margin: $spacing-l;
+
+  &___header {
+    padding-bottom: $spacing-m;
+    color: var(--color-primary);
+  }
+
+  &__quench-logo {
+    margin-right: $spacing-m;
+    @media screen and (max-width: 500px) {
+      margin-right: $spacing-m;
+    }
+  }
+
+  &__button {
+    font-weight: 520;
+    text-transform: uppercase;
+    @extend %button;
+  }
+
+  &__title,
+  &__desc {
+    font-size: $font-m;
+    padding-bottom: $spacing-m;
+    line-height: 1;
+  }
+
+  &__title {
+    font-weight: bold;
+  }
+
+  &__content {
+    display: flex;
+    @media screen and (max-width: 500px) {
+      display: block;
+    }
+  }
+}
+
 ul {
   margin: 0;
   list-style: none;
@@ -139,6 +187,7 @@ a {
 
 h1,
 h2,
+h3,
 p {
   margin: 0px;
 }
@@ -159,41 +208,5 @@ p {
   }
 }
 
-// .App {
-//   text-align: center;
-// }
-
-// .App-logo {
-//   height: 40vmin;
-//   pointer-events: none;
-// }
-
-// @media (prefers-reduced-motion: no-preference) {
-//   .App-logo {
-//     animation: App-logo-spin infinite 20s linear;
-//   }
-// }
-
-// .App-header {
-//   background-color: #282c34;
-//   min-height: 100vh;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   font-size: calc(10px + 2vmin);
-//   color: white;
-// }
-
-// .App-link {
-//   color: #61dafb;
-// }
-
-// @keyframes App-logo-spin {
-//   from {
-//     transform: rotate(0deg);
-//   }
-//   to {
-//     transform: rotate(360deg);
-//   }
-// }
+// padding is in between. within the element. Put it in there
+// margin is whatever its outside=

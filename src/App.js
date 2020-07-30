@@ -3,18 +3,10 @@ import george_iphone from "./assets/GeorgeiPhone-500.png";
 import dev from "./dev";
 import Info from "./Info";
 import "./App.scss";
+import Project from "./Project";
 
 function App() {
   const { name, job, description } = dev;
-
-  // const alertGeorge = () => {
-  //   // ES6 Syntax
-  //   alert("Yo bunk!"); // built in JS function dog
-  // };
-
-  // // function alertGeorge() { // same as above
-
-  // // }
 
   const lightTheme = {
     "--color-primary": "#0071e3",
@@ -50,6 +42,7 @@ function App() {
     <div className="george">
       <div className="col-50">
         <Info name={name} job={job} description={description} />
+        <Project />
       </div>
 
       <div className="col-50">
