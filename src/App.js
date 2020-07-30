@@ -9,7 +9,7 @@ function App() {
 
   // const alertGeorge = () => {
   //   // ES6 Syntax
-  //   alert("Yo bunk!"); // built in JS function
+  //   alert("Yo bunk!"); // built in JS function dog
   // };
 
   // // function alertGeorge() { // same as above
